@@ -1,0 +1,27 @@
+/*
+** Animations
+*/
+
+@-webkit-keyframes rainbow {
+	0% {background: #ff0000;}
+	10% {background: #ff8000;}
+	20% {background: #ffff00;}
+	30% {background: #80ff00;}
+	40% {background: #00ff00;}
+	50% {background: #00ff80;}
+	60% {background: #00ffff;}
+	70% {background: #0080ff;}
+	80% {background: #0000ff;}
+	90% {background: #8000ff;}
+	100% {background: #ff0080;}
+}
+
+@-webkit-keyframes pulse-bw {
+	0% {background: #000000;}
+	100% {background: #ffffff;}
+}
+
+@-webkit-keyframes pulse-gw {
+	0% {background: #7f7f7f;}
+	100% {background: #ffffff;}
+}

@@ -1,0 +1,37 @@
+/*
+** Title Bar
+*/
+
+header[class^="header-"]:not(.header-2Lg0Oe) {
+	padding: 10px;
+	height: 30px;
+	padding-top: 11px;
+}
+div[class*="title-"], div[class*="headerBar-"] {
+	min-height: 30px !important;
+	max-height: 30px !important;
+}
+.title-wrap {
+	min-height: 30px !important;
+	max-height: 30px !important;
+}
+.friends-row {
+	height: 30px !important;
+}
+.friends-header {
+	height: 29px !important;
+}
+.private-channels .search-bar {
+	min-height: 30px !important;
+	max-height: 30px !important;
+}
+.private-channels .search-bar input {
+	height: 16px !important;
+	padding: 3px 7px 5px 7px !important;
+}
+.search .search-bar {
+	width: 76px !important; /*76px*/
+}
+.search.focused .search-bar, .search.open .search-bar, .search.popout-open .search-bar {
+	width: 172px !important;
+}

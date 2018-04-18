@@ -1,0 +1,140 @@
+/*
+** bg stuff
+*/
+
+/*section:not(.input-sensitivity-toggle),
+.ui-standard-sidebar-view {
+	background-image: var(--background-image) !important;
+	background-size: cover !important;
+	background-position: center center !important;
+}
+
+/*div [class*="guildsWrapper-"],
+.guilds-wrapper,
+.auth-inner .auth-brand
+.guilds-wrapper .guilds-add,
+form.auth-form,
+.scroller-wrap .scroller::-webkit-scrollbar-thumb,
+.search-results-wrap .results-blocked,
+.scroller-wrap.polyfill .scrollbar .thumb:after,
+.theme-dark.context-menu .context-menu{
+	background-color: rgba(30,33,36,.25) !important;
+}
+
+section .guilds-wrapper {
+	background-color: rgba(30,33,36,.25) !important;
+}
+.theme-dark .friends-table .scroller-wrap ::-webkit-scrollbar-track-piece,
+.theme-dark .messages-wrapper .scroller-wrap ::-webkit-scrollbar-track-piece {
+	background-color: rgba(0,0,0,0) !important;
+}
+
+.scroller-wrap .scroller::-webkit-scrollbar-thumb,
+.scroller-wrap .scroller::-webkit-scrollbar-track-piece {
+	border-color: rgba(0,0,0,0) !important;
+}
+
+/*.footer-1PYmcw,
+.scroller-wrap.dark .scrollbar,.scroller-wrap.dark .scrollbar:after,
+.scroller-wrap.dark .scrollbar .thumb,
+.theme-dark .to-1B1cnC
+.popout-2Py-_h .section-3y_XWs,
+.container-2-NHa8,
+.guildInner-3SWl8A,
+.theme-dark .footer-XPgXYX,
+.theme-dark .ui-quick-select-popout,
+.theme-dark .ui-standard-sidebar-view .sidebar-region,
+.theme-dark .voiceStates-1kq0q7 .avatar-3OSqxz,
+.theme-dark .quickswitcher-2NdiGJ,
+.theme-dark .tiles-3jKTg9,
+.theme_dark-2FtE3l,
+.auth-tiling-bg,
+.auth-background,
+.verify-connected-account .btn:disabled,
+.guilds-wrapper .guilds .guild .guild-inner,
+.guilds-wrapper .guild-separator:after,
+.invite-CTGItT,
+.theme-dark .autocomplete-1TnWNR,
+.theme-dark .attachPopout-gjwHsr,
+.search-bar,
+.theme-dark .invite-button,
+.theme-dark .sidebar-32BRdp,
+.theme-dark .user-settings-voice .preview-overlay,
+.theme-dark .message-group .comment .markup pre,
+.theme-dark .message-group .comment .markup code.inline,
+.theme-dark .message-group .comment .markup pre code,
+.theme-dark .messages-popout-wrap,
+.theme-dark .messages-popout-wrap .has-more button,
+.theme-dark .search-results-wrap,
+.theme-dark .search-results-wrap .search-header,
+.theme-dark .search-results-wrap .channel-separator .channel-name,
+.theme-dark #friends .friends-header .tab-bar .tab-bar-item:hover:not(.selected),
+.theme-dark #friends .friends-header .tab-bar .tab-bar-item:hover:not(.selected) .badge,
+.theme-dark #friends .friends-table .friends-row .friends-column-actions .friends-action,
+.container-RYiLUQ,
+.private-channels,
+.channels-wrap,
+.theme-dark .videoPreview-3IIfvB,
+.guild-channels,
+.theme-dark .channel-members,
+.theme-dark .themed-popout,
+.theme-dark .private-channel-recipients-invite .friend,
+.theme-dark .footer-1PYmcw {
+	/*background-color: rgba(47,49,54,0) !important;
+	background-color: rgba(0,71,171,1) !important;
+}
+
+.theme-dark .private-channel-recipients-invite .friend {
+	background-color: rgba(0,71,171,1) !important;
+}
+
+section .channels-wrap,
+section .chat,
+section .chat > .content,
+section .chat > .content > .flex-vertical,
+section .chat > .content > .flex-vertical > .messages-wrapper,
+
+section #friends,
+section #friends > .friends-header,
+section #friends > .friends-table,
+.ui-standard-sidebar-view > .content-region {
+	background-color: rgba(30,33,36,0) !important;
+}
+
+.chat .divider.divider-red>span, .chat .divider>span {
+	line-height: 0px;
+}
+.theme-dark .chat .has-more button {
+	background-color: rgba(50,53,58,.25);
+}
+
+.ui-standard-sidebar-view > .sidebar-region,
+section > .channels-wrap > .flex-lFgbSz,
+section > .channels-wrap > .private-channels,
+section > .channels-wrap > .scrollerWrap-2uBjct,
+section > .channels-wrap > .container-iksrDt,
+section .chat > .content > .channel-members-wrap .channel-members {
+	background-color: rgba(47,49,54,.25) !important;
+}
+
+div[class*="contentSelectedText-"] {
+	background-color: rgba(79,84,92,.3);
+}
+div[class*="contentHoveredText-"] {
+	background-color: rgba(54,57,63,.75);
+}
+
+/*section > .channels-wrap > .flex-lFgbSz > .flexChild-1KGW5q,
+section > .channels-wrap > .private-channels > .search-bar,
+section > .chat > .title-wrap,
+section > .friends > .friends-header {
+	background-color: rgba(0,0,0,0) !important;
+}
+
+.markup > pre,
+.markup > pre > code {
+	background-color: rgba(47,49,55,.4) !important;
+}
+.markup > code.inline {
+	background-color: rgba(47,49,55,.6) !important;
+}*/

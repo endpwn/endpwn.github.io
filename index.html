@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>endpwn inject</title>
+		<script src="./endpwn.js"></script>
+	</head>
+	<body onload="startup()">
+		<div style="position:absolute;top:0px;width:99%;height:14px;-webkit-app-region:drag;"></div>
+		<img onclick="pause()" style="width:128px;height:128px;margin:8px;" src="endpwn.png">
+		<div id="buttons" style="display:none;">
+			<button onclick='uninstall()' id="uninstallButton">Uninstall</button>
+			<button onclick='setup()' id="setupButton">Continue Setup</button><br>
+			<button onclick='returnToDiscord()'>Skip Update</button>
+			<button onclick='_epver=null;setup()'>Force Update</button><br>
+			<button onclick='setSilent()'>Disable Splash Screen</button>
+		</div><br>
+		<div id="logger">Welcome to EndPwn.<br>Click the logo to open options.</div>
+	</body>
+</html>
+<style>
+body {
+	background-color: #2f3136;
+	display: none;
+}
+* {
+	color: white;
+	font-family: monospace;
+	text-align: center;
+}
+button {
+	background-color: #666666;
+	border: none;
+}
+</style>
+<script type="text/javascript">
+
+var eplog = function (text) {
+	logger = document.getElementById('logger');
+	logger.innerText += "\n" + text;
+}
+
+function pause()
+{
+	if (start!=null) { clearTimeout(start); }
+	document.getElementById('buttons').style.display = "block";
+	document.getElementById('logger').innerText = "Welcome to EndPwn2.";
+	if (localStorage.getItem("ran") != "true")
+	{
+		eplog("\nEndPwn2 modifies the way Discord works by injecting code into its asar files,");
+		eplog("and by dropping files in its AppData folder to be ran at startup.");
+		if (!browser) {
+			document.getElementById('setupButton').innerText = "Begin Setup";
+			document.getElementById('uninstallButton').outerHTML = "";
+			eplog("\nIf any of this sounds unwanted, go back to Discord by clicking the Skip Update button above.");
+			eplog("Otherwise, press the Begin Setup button above to start the instillation.\n");
+		}
+		else {
+			document.getElementById('buttons').style.display = "none";
+			eplog("\nTo install EndPwn2, enter the following into your Discord client's console by pressing Ctrl+Shift+I.");
+			eplog("\nDiscordNative.nativeModules.requireModule('discord_/../electron').remote.getCurrentWindow().loadURL('https://block57.net/discord/');");
+		}
+		
+	}
+}
+
+function setSilent()
+{
+	if (localStorage.getItem("silent") != "true")
+	{
+		localStorage.setItem("silent", "true");
+		silent=true;
+		endpoint_setup();
+		eplog("Splash screen disabled.");
+	}
+}
+
+var start;
+
+function startup()
+{
+	if (localStorage.getItem("silent") == "true" && (window.location.hash=='#silent' || window.location.href.indexOf('?silent') != -1))
+	{
+		localStorage.setItem("silent", "true");
+		silent=true;
+		setup();
+	}
+	else { document.body.style.display = "block"; if (localStorage.getItem("silent") != null) {localStorage.removeItem("silent");} }
+	if (localStorage.getItem("ran") != "true") { pause(); }
+	else { start = setTimeout(function(){ setup(); }, 2500); }
+}
+
+function returnToDiscord()
+{
+	electron.getCurrentWindow().loadURL('https://discordapp.com/channels/@me');
+}
+</script>

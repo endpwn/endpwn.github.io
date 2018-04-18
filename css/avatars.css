@@ -1,0 +1,76 @@
+/*
+** Avatar Radius + Profile
+*/
+
+div[class*="mask-"]
+{
+	mask: none !important;
+	-webkit-mask: none !important;
+	-webkit-mask-size: 0% !important;
+}
+
+div[class*="avatarDefault-"],
+div[class*="avatarSpeaking-"],
+div[class*="avatar-"],
+div[class*="avatarHint-"],
+div[class*="avatar-"] > div[class*="image-"],
+.ui-call-avatar.voice {
+	border-radius: var(--avatar-border-radius) !important;
+}
+
+/*div[class*="avatar-"] .status.status-typing {
+	border-style: hidden !important;
+	animation: flickerAnimation 1s infinite;
+}
+.status.status-typing .spinner {
+	transform: rotate(-90deg);
+}*/
+
+.protip {
+	display: none;
+}
+div[class^="footer-"]  {
+	padding: 10px 10px 2px 10px !important;
+}
+
+/* Profile Roles */
+
+.role-3rahR_ {
+	position:relative;
+	border-radius:0%;
+	padding-right:10px;
+}
+
+.roleCircle-3-vPZq {
+	border-radius:0%;
+	position:absolute;
+	width:100%;
+	height:22px;
+	z-index:1;
+	opacity:1;
+	margin-right:0;
+	margin-left:-4px;
+}
+
+.roleName-DUQZ9m {
+    z-index:2;
+}
+
+.roleRemoveIcon-2iu0iE {
+    display: block;
+    margin: 6px 2px 6px 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+}
+
+.roleRemoveIcon-2iu0iE .fill {
+    z-index:5;
+	fill: #FFF;
+	filter: brightness(0);
+}
+
+.addButton-3RuTE0 {
+    z-index:3;
+    padding-right: 4px;
+}

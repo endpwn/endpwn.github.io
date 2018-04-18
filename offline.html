@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>endpwn inject</title>
+	</head>
+	<body onload="setTimeout(go,250);">
+		<img src="https://block57.net/discord/endpwn.png" style="display:none;" onerror="err()">
+		<div id="err" style="display:none;">Welcome to EndPwn.<br><br>We seem to be having some technical difficulties.<br>
+		Our main site seems to be inaccessable.<br>Discord will start momentarily.<br>
+		If this is in error, press <a href="" onclick="go()">here</a> to load the site.</div>
+		<div style="position:absolute;top:0px;width:99%;height:14px;-webkit-app-region:drag;"></div>
+	</body>
+</html>
+<style>
+body {
+	background-color: #2f3136;
+}
+* {
+	color: white;
+	font-family: monospace;
+	text-align: center;
+}
+button {
+	background-color: #666666;
+	border: none;
+}
+</style>
+<script>
+if(typeof(require)=="undefined") {
+		window.electron=DiscordNative.nativeModules.requireModule("discord_/../electron").remote;
+		window.require=electron.require;
+	} else {
+		window.electron=require('electron').remote;
+	}
+	
+function go() {
+	electron.getCurrentWindow().loadURL("https://block57.net/discord");
+}
+function err_go() {  }
+function err() {
+	go = undefined;
+	egg = setTimeout(electron.getCurrentWindow().loadURL("https://discordapp.com/channels/@me"), 2500);
+	if (!(localStorage.getItem("silent") == "true" && (window.location.hash=='#silent' || window.location.href.indexOf('?silent') != -1))) {
+		document.getElementById('err').style.display = 'block';
+	}
+}
+</script>

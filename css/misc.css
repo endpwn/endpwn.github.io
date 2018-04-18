@@ -1,0 +1,19 @@
+/*
+** Misc
+*/
+
+.tooltip.tooltip-black {
+    background-color: var(--tooltip-color);
+}
+.tooltip.tooltip-black.tooltip-top:after {
+    border-top-color: var(--tooltip-color);
+}
+.tooltip.tooltip-black.tooltip-bottom:after {
+    border-bottom-color: var(--tooltip-color);
+}
+.tooltip.tooltip-black.tooltip-left:after {
+    border-left-color: var(--tooltip-color);
+}
+.tooltip.tooltip-black.tooltip-right:after {
+    border-right-color: var(--tooltip-color);
+}

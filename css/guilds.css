@@ -1,0 +1,97 @@
+/*
+** Guilds Wrapper
+*/
+
+.guilds-wrapper .dms {
+	margin-top: var(--guild-margin-between) !important;
+	margin-bottom: var(--guild-margin-between) !important;
+}
+.guilds-wrapper .friends-online {
+	display: none;
+}
+.guilds-wrapper .guild-separator {
+	margin-top: calc(var(--guild-margin-between)*2) !important;
+	margin-bottom: calc(var(--guild-margin-between)*2) !important;
+}
+.guilds-wrapper .guild-separator:after {
+	left: 0% !important;
+	width: var(--guild-size-width) !important;
+}
+
+.guilds-wrapper .scroller-wrap  {
+	width: calc(var(--guild-size-width) + 14px + calc(var(--guilds-margin-sides)*2)) !important;
+}
+.guilds-wrapper {
+	width: calc(var(--guild-size-width) + calc(var(--guilds-margin-sides)*2)) !important;
+}
+.guilds-wrapper .guilds {
+	padding: var(--guilds-margin-ends) 0 var(--guilds-margin-ends) var(--guilds-margin-sides) !important;
+}
+
+.guild + .guild {
+	margin-top: var(--guild-margin-between) !important;
+}
+
+.badge {
+	border-radius: var(--badge-border-radius) !important;
+	padding: var(--badge-padding) !important;
+}
+
+.guilds-wrapper .guilds .guild.audio .guild-inner:after,
+.guilds-wrapper .guilds .guild.video .guild-inner:after {
+	width: var(--guild-size-width) !important;
+	height: var(--guild-size-height) !important;
+	border-radius: 0% !important;
+	background-size: calc(var(--guild-size-width)/1.5) !important;
+	background-color: rgba(0, 0, 0, .25);
+	top: 50% !important;
+	left: 50% !important;
+	transform: translate(-52%, -52%) !important;
+}
+
+.guild.unread:not(.selected):before {
+	-webkit-animation: pulse-gw 2s infinite alternate;
+	height: 50% !important;
+	width: 100% !important;
+	margin: 0 !important;
+	top: 25% !important; 
+	padding: 0px 3px !important;
+	left: -3px !important;
+	border-radius: 0 !important;
+}
+.guild.selected:before {
+	height: 100% !important;
+	width: 100% !important;
+	margin: 0 !important;
+	top: 0% !important;
+	padding: 0px 5px !important;
+	top: -0px !important;
+	left: -5px !important;
+	border-radius: 0 !important;
+	transition: none !important;
+}
+
+.guild,
+.guilds-error,
+.guild-inner,
+.guild-inner a,
+.friends-icon {
+	border-radius: var(--guild-border-radius) !important;  
+	width: var(--guild-size-width) !important;
+	height: var(--guild-size-height) !important;
+	background-size: var(--guild-size-width) var(--guild-size-width) !important;
+
+	line-height: var(--guild-size-height) !important;
+	font-size: calc(var(--guild-size-width) / 2.5) !important;
+}
+
+.guilds-add {
+	border-radius: var(--guild-border-radius) !important;
+}
+.guilds-add-inner {
+	position: absolute !important;
+	top: 50% !important;
+	left: 50% !important;
+	transform: translate(-50%, -50%) !important;
+	font-size: var(--guild-size-height) !important;
+}

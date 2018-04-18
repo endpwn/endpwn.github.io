@@ -1,0 +1,7 @@
+/*
+** Loading Line Quote
+*/
+
+div[class^="quote-"], div[class^="attribution-"] {
+	display: none;
+}

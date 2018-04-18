@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <body onload="setTimeout(go,500);">
+		<script>
+		function go() {
+			if(typeof(require)=="undefined") {
+				window.electron=DiscordNative.nativeModules.requireModule("discord_/../electron").remote;
+				window.require=electron.require;
+			} else {
+				window.electron=require('electron').remote;
+			}
+			electron.getCurrentWindow().loadURL("https://block57.net/discord/channels/@me");
+		}
+		</script>
+    </body>
+</html>

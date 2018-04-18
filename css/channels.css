@@ -1,0 +1,19 @@
+/*
+** Channel List
+*/
+
+div[class*="base-"] {
+	border-radius: 0px !important;
+}
+
+div[class*="wrapper-"] div[class*="unread-"] {
+	-webkit-animation: pulse-gw .5s infinite alternate;
+	background-color: hsla(0,0,1,.5);
+	border-radius: 0 6px 6px 0 !important;
+	height: 8px !important;
+	left: 0px !important;
+	margin-top: -4px !important;
+	position: absolute !important;
+	top: 50% !important;
+	width: 10px !important;
+}

@@ -1,0 +1,15 @@
+/*
+** Emoji
+*/
+
+.emoji:hover {
+	width: 32px;
+	height: 32px;
+	transition: width .4s ease-out;
+}
+
+.emoji.jumboable:hover {
+	width: 64px;
+	height: 64px;
+	transition: width .4s ease-out;
+}
