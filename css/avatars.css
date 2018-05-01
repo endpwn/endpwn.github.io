@@ -35,13 +35,13 @@ div[class^="footer-"]  {
 
 /* Profile Roles */
 
-.role-3rahR_ {
+[class*="role-"] {
 	position:relative;
 	border-radius:0%;
 	padding-right:10px;
 }
 
-.roleCircle-3-vPZq {
+[class*="roleCircle-"] {
 	border-radius:0%;
 	position:absolute;
 	width:100%;
@@ -52,11 +52,11 @@ div[class^="footer-"]  {
 	margin-left:-4px;
 }
 
-.roleName-DUQZ9m {
+[class*="roleName-"] {
     z-index:2;
 }
 
-.roleRemoveIcon-2iu0iE {
+[class*="roleRemoveIcon-"] {
     display: block;
     margin: 6px 2px 6px 0;
     right: 0;
@@ -64,13 +64,11 @@ div[class^="footer-"]  {
     position: absolute;
 }
 
-.roleRemoveIcon-2iu0iE .fill {
+[class*="roleRemoveIcon-"] .fill {
     z-index:5;
-	fill: #FFF;
-	filter: brightness(0);
 }
 
-.addButton-3RuTE0 {
+[class*="addButton-"] {
     z-index:3;
     padding-right: 4px;
 }

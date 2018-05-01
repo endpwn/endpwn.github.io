@@ -1,7 +1,10 @@
-// load epapi.js
-window._epapi = require(_epdata + "epapi");
-// start the api
-$api.go('asarpwn',false,'EndPwn');
+function __krequire(path) {
+        return eval('(()=>{var exports={};' + fs.readFileSync(_epdata + path, 'utf8').toString() + ';return exports})()');
+}
+//get that epapi
+var _epapi = __krequire('epapi.js');
+//start it up, brand as endpwn
+_epapi.go('asarpwn',false,'EndPwn',false);
 $api.data += "endpwn/";
 
 $api.discord.toggleDeveloper = function() {
@@ -35,20 +38,12 @@ $api.ui.createMsg = function (text) {
 	return msg;
 }
 
-// some epapi shorthand methods, moved here because early accessibility
-window.$listen = function (e, c) {
-    return document.addEventListener(e, c);
-}
-window.$dispatch = function (e) {
-    return document.dispatchEvent(e);
-}
-
 // beautifuldiscord, used to load css styles
 // credit to leovoel
 bdwatcher=null,bdtag=null,setupCSS=function(n){var e=fs.readFileSync(n,"utf-8");null===bdtag&&(bdtag=document.createElement("style"),document.head.appendChild(bdtag)),bdtag.innerHTML=e,null===bdwatcher&&(bdwatcher=fs.watch(n,{encoding:"utf-8"},function(e,w){if("change"===e){var i=fs.readFileSync(n,"utf-8");bdtag.innerHTML=i}}))};
 
 // SELF_XSS warning disable (dr1ft)
-var results=wc.findFunc("SELF_XSS_HEADER");wc.get(results[results.length-1].i).consoleWarning=function(e){};
+$api.util.findFuncExports('consoleWarning').consoleWarning = e => { };
 
 // blend the linq.js methods into the array prototype for implicit Enumerable.from()
 if (!typeof (Enumerable) == 'undefined')

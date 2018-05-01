@@ -6,7 +6,7 @@
  * Memework(tm) - Discord datamining
  */
 
-var epver = 2.016;
+var epver = 2.018;
 var silent = false;
 var browser = false;
 
@@ -223,49 +223,48 @@ var dropfiles = function () {
     // bootstrap
     var pl = `var fs=require("original-fs");exports.x=function(win){win.webContents.executeJavaScript('${ec}var _epver=${epver};${rs};${cc};${ct};if(window.location.hostname.includes("discordapp.com")){require(_epdata + "/main")}');}`;
     //   end i.js cyst
+	
+/*var fs=require("original-fs");
+exports.x=function(win) {
+	win.webContents.executeJavaScript('var fs=require("original-fs");
+	var el=require("electron").remote;
+	var win=el.getCurrentWindow();
+	var app=el.app;
+	var _epdata="C:/Users/Christian/AppData/Roaming/discordcanary/endpwn/";
+	var _epver=2.018;
+	var _ep_restart=function(){app.relaunch();app.quit()};
+	var _ep_clean=function(){el.getCurrentWindow().webContents.session.clearCache(function(){})};
+	var _ep_continue=function(){win.loadURL("https://canary.discordapp.com/channels/@me")};
+	if(window.location.hostname.includes("discordapp.com")){require(_epdata + "/main")}');
+}*/
 
     _fs.writeFileSync(data() + '/endpwn/i.js', pl);
     _fs.writeFileSync(data() + '/endpwn/p.js');
 
-    try
-    {
+    try {
         _fs.readFileSync(data() + '/endpwn/autoexec.js');
     }
-    catch(e)
-    {
-        _fs.writeFileSync(data() + '/endpwn/autoexec.js', 'setupCSS(_epdata + "/styles/style.css");\nconsole.log("Hello, world!");');
+    catch(e) {
+		_fs.writeFileSync(data() + '/endpwn/autoexec.js', 'setupCSS(_epdata + "/styles/style.css");\nconsole.log("Hello, world!");');
     }
 	
-    var eclient = new XMLHttpRequest();
-    //eclient.open('GET', 'https://block57.net/discord/epapi.js');
-    eclient.open('GET', 'https://endpwn.github.io/epapi.js');
-    eclient.onreadystatechange = function() {
-        if (eclient.readyState === 4) {
-            _fs.writeFileSync(data() + '/endpwn/epapi.js', eclient.responseText);
-        }
-    }
-    eclient.send();
+	fetch('https://endpwn.github.io/epapi/epapi.js?_=' + Date.now())
+		.then(r => r.text())
+		.then(f => { fs.writeFileSync(data() + '/endpwn/epapi.js', f); });
 	
-    var mclient = new XMLHttpRequest();
-    mclient.open('GET', 'https://block57.net/discord/main.js');
-    mclient.onreadystatechange = function() {
-        _fs.writeFileSync(data() + '/endpwn/main.js', mclient.responseText);
-    }
-    mclient.send();
+	fetch('https://block57.net/discord/main.js?_=' + Date.now())
+		.then(r => r.text())
+		.then(f => { fs.writeFileSync(data() + '/endpwn/main.js', f); });
 	
-    var oclient = new XMLHttpRequest();
-    oclient.open('GET', 'https://block57.net/discord/offline.html');
-    oclient.onreadystatechange = function() {
-        _fs.writeFileSync(data() + '/endpwn/app', oclient.responseText);
-    }
-    oclient.send();
+	fetch('https://block57.net/discord/offline.html?_=' + Date.now())
+		.then(r => r.text())
+		.then(f => { fs.writeFileSync(data() + '/endpwn/app', f); });
 	
     _fs.writeFileSync(data() + '/endpwn/legal.txt', license);
-    try{
-        _fs.readFileSync(data() + '/endpwn/styles/style.css');
-    }catch(e){
-        _fs.writeFileSync(data() + '/endpwn/styles/style.css', "/*@import url('https://block57.net/discord/css/all.css');*/\n@import url('https://block57.net/discord/css/animations.css');\n@import url('https://block57.net/discord/css/avatars.css');\n@import url('https://block57.net/discord/css/background.css');\n@import url('https://block57.net/discord/css/channels.css');\n@import url('https://block57.net/discord/css/emoji.css');\n@import url('https://block57.net/discord/css/guilds.css');\n@import url('https://block57.net/discord/css/misc.css');\n@import url('https://block57.net/discord/css/titlebar.css');\n@import url('https://block57.net/discord/css/typinginput.css');\n@import url('https://block57.net/discord/css/variables.css');\n\n/* This file contains the custom CSS edits for EndPwn. If you want to\nchange the way these look, copy in the 'variables.css' file and edit the\nvalues in it. Also, you can select what kinds of edits you want applied\nusing the lines above. Comment out the ones you don't want, or leave them\nall in by uncommenting the 'all.css' file and removing the others. */");
-    }
+	
+    if (!_fs.existsSync(data() + '/endpwn/styles/style.css')) {
+		 _fs.writeFileSync(data() + '/endpwn/styles/style.css', "/*@import url('https://block57.net/discord/css/all.css');*/\n@import url('https://block57.net/discord/css/animations.css');\n@import url('https://block57.net/discord/css/avatars.css');\n@import url('https://block57.net/discord/css/background.css');\n@import url('https://block57.net/discord/css/channels.css');\n@import url('https://block57.net/discord/css/emoji.css');\n@import url('https://block57.net/discord/css/guilds.css');\n@import url('https://block57.net/discord/css/misc.css');\n@import url('https://block57.net/discord/css/titlebar.css');\n@import url('https://block57.net/discord/css/typinginput.css');\n@import url('https://block57.net/discord/css/variables.css');\n\n/* This file contains the custom CSS edits for EndPwn. If you want to\nchange the way these look, copy in the 'variables.css' file and edit the\nvalues in it. Also, you can select what kinds of edits you want applied\nusing the lines above. Comment out the ones you don't want, or leave them\nall in by uncommenting the 'all.css' file and removing the others. */");
+	}
 }
 
 var crash = function () {
